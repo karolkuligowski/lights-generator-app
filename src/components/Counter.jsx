@@ -20,10 +20,10 @@ export const Counter = (props) => {
     <div className={styles.wrapper}>
       <Text>
         {value}
-        {props.text}{" "}
+        {props.count} {props.text}
       </Text>
-      <IconMinus onClick={handleDecrement} />
-      <IconPlus onClick={handleIncrement} />
+      <IconMinus onClick={props.onDecrement} />
+      <IconPlus onClick={props.onIncrement} />
     </div>
   );
 };
